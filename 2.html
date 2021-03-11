@@ -3,17 +3,49 @@
   <head>
     <title>web1-css</title>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="colors.js"></script>
   </head>
   <body>
     <h1><a href="index.html">web</a></h1>
-    <ol>
-      <li><a href="1.html">html</a></li>
-      <li><a href="2.html">css</a></li>
-      <li><a href="3.html">javascript</a></li>
-    </ol>
 
-    <h2>CSS</h2>
-    <p> WEB2 - JavaScript를 공부하고 싶어서 방문해보시면 이 수업이 WEB1 - HTML & Internet 수업에 의존하고 있는 수업이라고 안내를 해드립니다. HTML을 모르신다면 WEB1을 보시고 JavaScript를 보시면 되고, HTML을 이미 알고 있다면 JavaScript부터 공부하시면 됩니다. 이 처럼 각각의 수업은 서로에게 의존하고 있습니다. 그 의존관계에 따라서 WEBn의 n이 달라지기 때문에 이 점에 착안해서 모든 수업을 WEBn이라고 부르고 있습니다.
-    </p>
+    <input type="button" value = 'night' onclick="
+      nightDayHandler(this);
+    ">
+    <input type="button" value = 'night' onclick="
+      nightDayHandler(this);
+    ">
+    <div id="grid">
+      <ol>
+        <li><a href="1.html">html</a></li>
+        <li><a href="2.html">css</a></li>
+        <li><a href="3.html">javascript</a></li>
+      </ol>
+      <!--
+      <ol>
+        <li><a href="1.html">html</a></li>
+        <li><a href="2.html">css</a></li>
+        <li><a href="3.html">javascript</a></li>
+      </ol>
+    -->
+      <div id="article">
+        <h2>CSS</h2>
+        <p> WEB2 - JavaScript를 공부하고 싶어서 방문해보시면 이 수업이 WEB1 - HTML & Internet 수업에 의존하고 있는 수업이라고 안내를 해드립니다. HTML을 모르신다면 WEB1을 보시고 JavaScript를 보시면 되고, HTML을 이미 알고 있다면 JavaScript부터 공부하시면 됩니다. 이 처럼 각각의 수업은 서로에게 의존하고 있습니다. 그 의존관계에 따라서 WEBn의 n이 달라지기 때문에 이 점에 착안해서 모든 수업을 WEBn이라고 부르고 있습니다.
+        </p>
+      </div>
+  </div>
+  <input type="button" value = 'night' onclick="
+  var target = document.querySelector('body');
+  if(this.value === 'night'){
+  target.style.backgroundColor='black';
+  target.style.color='white';
+  this.value = 'day';
+  } else{
+  target.style.backgroundColor='white';
+  target.style.color='black';
+  this.value = 'night';
+  }
+  ">
   </body>
 </html>
